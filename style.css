@@ -1,0 +1,868 @@
+
+/* =========================================
+   STARTION BATCH 2
+   DARK FUTURISTIC BLUE THEME
+========================================= */
+
+
+/* COLOR PALETTE */
+
+:root {
+    --bg: #080B14;
+    --surface: #101A2C;
+    --surface-hover: #172B49;
+
+    --blue-dark: #102A56;
+    --blue: #2675D8;
+    --blue-light: #60A5FA;
+
+    --text: #FFFFFF;
+    --muted: #A7B5CA;
+    --border: #243B5C;
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(38, 117, 216, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 85% 45%,
+            rgba(16, 42, 86, 0.30),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 50% 100%,
+            rgba(38, 117, 216, 0.10),
+            transparent 40%
+        ),
+        #080B14;
+
+    background-attachment: fixed;
+
+    color: var(--text);
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    width: 350px;
+    height: 350px;
+
+    top: 15%;
+    left: -180px;
+
+    background: rgba(38, 117, 216, 0.12);
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+    width: 400px;
+    height: 400px;
+
+    right: -200px;
+    bottom: 5%;
+
+    background: rgba(30, 100, 200, 0.13);
+
+    filter: blur(110px);
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(8, 11, 20, 0.75);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.FotoStartion {
+    width: 80px;
+    height: auto;
+
+    transform: translateY(25px);
+
+    background-color: white;
+    border-radius: 50%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    font-size: 21px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue-light);
+}
+
+.menu-link {
+    color: #D5E5FA;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.LinkSelection {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    border-radius: 10px;
+
+    background: rgba(38, 117, 216, 0.15);
+    color: var(--blue-light);
+
+    transition: 0.3s ease;
+}
+
+.LinkSelection:hover {
+    background: rgba(96, 165, 250, 0.25);
+    transform: scale(1.1);
+}
+
+.menu-link:hover {
+    color: var(--blue-light);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 85px 22px 100px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.subtitle {
+    display: inline-block;
+
+    color: var(--blue-light);
+
+    font-size: 30px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.35);
+}
+
+.status-dot {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    background: #60A5FA;
+    border-radius: 50%;
+
+    margin-right: 7px;
+
+    box-shadow: 0 0 10px #60A5FA;
+}
+
+.heading h1 {
+    font-size: clamp(40px, 8vw, 65px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.heading h1 span {
+    background: linear-gradient(
+        90deg,
+        #60A5FA,
+        #2675D8,
+        #A5D1FF
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+.heading-line {
+    width: 65px;
+    height: 3px;
+
+    border-radius: 10px;
+    margin: 25px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--blue-light),
+        transparent
+    );
+}
+
+
+/* =========================================
+   SELECTION LINKS
+========================================= */
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.selection-card {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 19px 22px;
+
+    background: linear-gradient(
+        120deg,
+        rgba(22, 43, 73, 0.75),
+        rgba(12, 22, 39, 0.85)
+    );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(96, 165, 250, 0.16);
+    border-radius: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    transition: 0.3s;
+}
+
+.icon-box {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(38, 117, 216, 0.15);
+    color: var(--blue-light);
+
+    font-size: 18px;
+}
+
+.selection-card span {
+    flex: 1;
+}
+
+.selection-card .arrow {
+    font-size: 12px;
+    color: #8299B9;
+    transition: 0.3s;
+}
+
+.selection-card:hover {
+    background: linear-gradient(
+        120deg,
+        rgba(31, 76, 130, 0.85),
+        rgba(16, 42, 86, 0.95)
+    );
+
+    border-color: rgba(96, 165, 250, 0.65);
+
+    box-shadow:
+        0 8px 30px rgba(38, 117, 216, 0.18),
+        0 0 15px rgba(38, 117, 216, 0.10);
+
+    transform: translateY(-4px);
+}
+
+.selection-card:hover .icon-box {
+    background: rgba(96, 165, 250, 0.2);
+}
+
+.selection-card:hover .arrow {
+    color: var(--blue-light);
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   PENDAFTARAN
+========================================= */
+
+.pendaftaran-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 15px;
+    cursor: default;
+}
+
+.pendaftaran-card > .icon-box {
+    margin: 0 auto;
+}
+
+.pendaftaran-card .pendaftaran-title {
+    display: block;
+    flex: none;
+
+    text-align: center;
+
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.pendaftaran-buttons {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 12px;
+}
+
+.btn-gelombang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 48px;
+
+    padding: 12px;
+
+    background: linear-gradient(
+        120deg,
+        #2675D8,
+        #102A56
+    );
+
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.btn-gelombang:hover {
+    background: linear-gradient(
+        120deg,
+        #60A5FA,
+        #2675D8
+    );
+
+    border-color: var(--blue-light);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 20px rgba(38, 117, 216, 0.25);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: linear-gradient(
+        120deg,
+        #0B1930,
+        #102A56,
+        #0A1930
+    );
+
+    color: white;
+
+    position: relative;
+    margin-top: 30px;
+
+    border-top: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.footer-main {
+    min-height: 400px;
+    padding: 40px 7%;
+
+    position: relative;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.footer-brand img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+}
+
+.footer-brand h2 {
+    font-size: clamp(25px, 4vw, 48px);
+    line-height: 1.3;
+
+    font-weight: 800;
+    color: white;
+}
+
+
+/* FOOTER CONTENT */
+
+.footer-content {
+    max-width: 600px;
+}
+
+.footer-content h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+
+    color: var(--blue-light);
+}
+
+.footer-content p {
+    color: #E0ECFA;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+.footer-content i {
+    margin-right: 8px;
+    color: var(--blue-light);
+}
+
+.footer-content .contact-title {
+    margin-top: 28px;
+}
+
+
+/* =========================================
+   FLOATING LOGO
+========================================= */
+
+.floating-logo {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 75px;
+    height: 75px;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(16, 42, 86, 0.85);
+
+    border: 2px solid rgba(96, 165, 250, 0.7);
+    border-radius: 50%;
+
+    padding: 5px;
+
+    box-shadow:
+        0 0 15px rgba(38, 117, 216, 0.4),
+        0 0 30px rgba(38, 117, 216, 0.2);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+.floating-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.floating-logo:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 20px rgba(96, 165, 250, 0.7),
+        0 0 40px rgba(38, 117, 216, 0.4);
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-bottom {
+    background: #050810;
+
+    color: #D5E5FA;
+
+    padding: 17px 15px;
+
+    text-align: center;
+    font-size: 13px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media screen and (min-width: 601px) {
+
+    .logo {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        width: 100%;
+
+        padding: 12px 16px;
+        min-height: 65px;
+    }
+
+    .FotoStartion {
+        width: 50px;
+        height: auto;
+
+        transform: none;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+        font-size: 20px;
+    }
+
+    .menu-link {
+        font-size: 10px;
+    }
+
+
+    /* MAIN CONTAINER */
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 55px 18px 65px;
+    }
+
+
+    /* HEADING */
+
+    .heading {
+        margin-bottom: 35px;
+    }
+
+    .subtitle {
+        font-size: 21px;
+        letter-spacing: 2px;
+
+        margin-bottom: 10px;
+    }
+
+    .heading h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        letter-spacing: -1.5px;
+    }
+
+    .heading p {
+        font-size: 12px;
+        line-height: 1.8;
+
+        padding: 0 3px;
+    }
+
+    .heading-line {
+        margin-top: 20px;
+    }
+
+
+    /* SELECTION CARDS */
+
+    .selection {
+        gap: 12px;
+    }
+
+    .selection-card {
+        width: 100%;
+        min-height: 65px;
+
+        padding: 12px 14px;
+        gap: 12px;
+
+        font-size: 12px;
+        border-radius: 11px;
+    }
+
+    .icon-box {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+
+        font-size: 16px;
+    }
+
+    .selection-card .arrow {
+        font-size: 11px;
+    }
+
+
+    /* PENDAFTARAN */
+
+    .pendaftaran-card {
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .pendaftaran-card .pendaftaran-title {
+        font-size: 14px;
+    }
+
+    .pendaftaran-buttons {
+        gap: 10px;
+    }
+
+    .btn-gelombang {
+        min-height: 48px;
+
+        padding: 11px;
+
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+        padding: 30px 18px 65px;
+        min-height: auto;
+    }
+
+    .footer-brand {
+        gap: 12px;
+
+        margin-bottom: 25px;
+        align-items: center;
+    }
+
+    .footer-brand img {
+        width: 55px;
+        height: 55px;
+
+        flex-shrink: 0;
+    }
+
+    .footer-brand h2 {
+        font-size: clamp(16px, 5vw, 21px);
+        line-height: 1.3;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-content h3 {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .footer-content p {
+        font-size: 11px;
+        line-height: 1.8;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* FLOATING LOGO */
+
+    .floating-logo {
+        width: 58px;
+        height: 58px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+
+    /* COPYRIGHT */
+
+    .footer-bottom {
+        padding: 15px 10px;
+
+        font-size: 9px;
+        letter-spacing: 0.3px;
+    }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL PHONE
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .navbar {
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .FotoStartion {
+        width: 40px;
+    }
+
+    .menu-link {
+        font-size: 9px;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .selection-card {
+        padding: 11px;
+        font-size: 11px;
+    }
+
+    .btn-gelombang {
+        font-size: 11px;
+    }
+
+}
